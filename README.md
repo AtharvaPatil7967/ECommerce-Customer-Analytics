@@ -43,3 +43,37 @@ This project focuses on the development of an intelligent customer segmentation 
    ```bash
    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
    cd your-repo-name
+2. Install dependencies:
+pip install -r requirements.txt
+(Note: Ensure you have a requirements.txt file listing pandas, numpy, streamlit, scikit-learn, plotly, etc.)
+
+3. Run the Dashboard:
+streamlit run app.py
+Upload Data: Use the Online Retail.csv format (InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country).
+
+📊 Methodology
+Data Upload: Transactional data is uploaded via CSV.
+
+Preprocessing: Cleaning data and removing cancellations.
+
+Feature Engineering: Transforming raw data into RFM metrics.
+
+Scaling: Standardizing features using StandardScaler.
+
+Clustering: Applying the selected algorithm.
+
+Evaluation: Metrics like Silhouette Score and Davies-Bouldin Index are calculated to measure cluster quality.
+
+📈 Results
+Based on the comparative analysis performed during the study:
+
+GMM (Gaussian Mixture Model) often yielded the highest Silhouette Score (approx 0.80) for complex retail datasets.
+
+The system successfully identified 4 distinct groups: Champions, Loyal Customers, At-Risk, and New/Potential.
+
+🔮 Future Scope
+Integration of Customer Lifetime Value (CLV) prediction.
+
+Real-time data pipeline integration.
+
+Churn prediction using classification models.
